@@ -1,9 +1,12 @@
 import Hero from "./components/Hero";
+import Nav from "./components/Nav";
+import Sidebar from "./components/Sidebar";
 
 function App() {
 	return (
 		<div className="App">
-			<h3>heloo</h3>
+			<Sidebar></Sidebar>
+			<Nav></Nav>
 			<Hero></Hero>
 		</div>
 	);

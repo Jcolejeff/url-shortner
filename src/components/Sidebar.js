@@ -75,18 +75,21 @@ const SidebarContainer = styled.div`
 
 	.sidebar {
 		position: fixed;
-		top: 0;
-		right: 0;
-		width: 70%;
-		height: 100%;
+		top: 5rem;
+		left: 1.3rem;
+		width: 90vw;
+		height: 55%;
 		background: var(--clr-white);
 		transition: var(--transition);
-		transform: translate(100%);
-		z-index: -1;
+		transform: scale(0);
+		z-index: -100;
+		border-radius: 20px;
+		background-color: red;
 	}
 	.show-sidebar {
-		transform: translate(0);
+		transform: scale(1);
 		z-index: 999;
+		right: 30%;
 	}
 	.cart-btn-wrapper {
 		margin: 2rem auto;

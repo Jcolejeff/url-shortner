@@ -38,9 +38,7 @@ const NavContainer = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-bottom: 1px solid #e6e6e6;
-	margin-block-end: 4rem;
-
+	padding: 4rem;
 	.nav-center {
 		width: 90vw;
 		margin: 0 auto;
@@ -61,7 +59,8 @@ const NavContainer = styled.nav`
 		color: var(--clr-primary-5);
 		cursor: pointer;
 		svg {
-			font-size: 2rem;
+			font-size: 2.8rem;
+			color: hsl(0, 0%, 75%);
 		}
 	}
 	.nav-links {

@@ -1,10 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import hero from "../images/illustration-working.svg";
 import hero2 from "../images/illustration-working.png";
+const getLocalStorage = () => {
+	let list = localStorage.getItem("list");
+	if (list) {
+		return (list = JSON.parse(localStorage.getItem("list")));
+	} else {
+		return [];
+	}
+};
 
 const Hero = () => {
 	const [query, setQuery] = useState("");
+	const [Loading, setLoading] = useState(false);
+	const [List, setList] = useState(getLocalStorage());
+	const [error, setError] = useState("");
+
+	useEffect(() => {
+		localStorage.setItem("list", JSON.stringify(List));
+	}, [List]);
 	const FetchLink = async () => {
 		const response = await fetch(
 			` https://api.shrtco.de/v2/shorten?url=${query}`
@@ -12,6 +27,7 @@ const Hero = () => {
 		const data = await response.json();
 		console.log(data);
 	};
+
 	return (
 		<Wrapper>
 			<section className="hero">

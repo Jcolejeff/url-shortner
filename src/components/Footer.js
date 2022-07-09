@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import bg from "../images/bg-boost-desktop.svg";
 import bg2 from "../images/bg-boost-mobile.svg";
-import logo from "../images/logo.svg";
 import {
   FaPinterest,
   FaTwitter,
@@ -61,6 +60,7 @@ export default Footer;
 
 const Wrapper = styled.footer`
   background-color: hsl(260, 8%, 14%);
+
   .boost {
     display: flex;
     flex-direction: column;
@@ -68,8 +68,10 @@ const Wrapper = styled.footer`
     align-items: center;
     color: var(--clr-white);
     gap: 1rem;
-
     background: url(${bg2}) center/cover no-repeat, hsl(257, 27%, 26%);
+    @media (min-width: 65rem) {
+      background: url(${bg}) center/cover no-repeat, hsl(257, 27%, 26%);
+    }
     height: 30vh;
     h3 {
       font-size: 2rem;
@@ -94,7 +96,10 @@ const Wrapper = styled.footer`
     justify-content: center;
     align-items: center;
     gap: 4rem;
-
+    @media (min-width: 65rem) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
     div {
       text-align: center;
       font-size: 1.2rem;

@@ -16,9 +16,14 @@ const Sidebar = () => {
 						<FaTimes></FaTimes>
 					</button>
 				</div>
-				<ul className="links">
-					<li>hello</li>
-				</ul>
+				<div className="links">
+					<h5> Features</h5>
+					<h5>Pricing</h5>
+					<h5>Resources</h5>
+					<hr />
+					<h5>Login</h5>
+					<button>Sign Up</button>
+				</div>
 			</aside>
 		</SidebarContainer>
 	);
@@ -35,13 +40,12 @@ const SidebarContainer = styled.div`
 		margin-top: -1rem;
 	}
 	.close-btn {
-		font-size: 1.4rem;
+		font-size: 2rem;
 		background: transparent;
 		border-color: transparent;
-		color: var(--clr-primary-5);
+		color: white;
 		transition: var(--transition);
 		cursor: pointer;
-		color: var(--clr-red-dark);
 		margin-top: 0.2rem;
 	}
 	.close-btn:hover {
@@ -52,48 +56,52 @@ const SidebarContainer = styled.div`
 		height: 80px;
 	}
 	.links {
-		margin-bottom: 10rem;
-		margin-top: 8rem;
-	}
-	.links a {
-		display: block;
-		text-align: center;
-		font-size: 1rem;
-		text-transform: capitalize;
-		padding: 1rem 1.5rem;
-		color: var(--clr-grey-3);
-		transition: var(--transition);
-		letter-spacing: var(--spacing);
-	}
+		color: white;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
 
-	.links a:hover {
-		padding: 1rem 1.5rem;
-		padding-left: 2rem;
-		background: var(--clr-grey-10);
-		color: var(--clr-grey-2);
+		h5 {
+			font-size: 2rem;
+		}
+		button {
+			width: 80%;
+			justify-self: center;
+			padding: 1rem;
+			border: none;
+			background-color: hsl(180, 66%, 49%);
+			color: white;
+			font-size: 1.7rem;
+			border-radius: 2rem;
+			font-weight: 700;
+			transition: var(--transition);
+			text-align: center;
+
+			&:hover {
+				color: hsl(180, 66%, 49%);
+				background: white;
+			}
+		}
 	}
 
 	.sidebar {
 		position: fixed;
-		top: 5rem;
+		top: 10rem;
 		left: 1.3rem;
 		width: 90vw;
-		height: 55%;
-		background: var(--clr-white);
+		height: 65%;
+		background: hsl(257, 27%, 26%);
 		transition: var(--transition);
 		transform: scale(0);
 		z-index: -100;
 		border-radius: 20px;
-		background-color: red;
 	}
 	.show-sidebar {
 		transform: scale(1);
 		z-index: 999;
 		right: 30%;
 	}
-	.cart-btn-wrapper {
-		margin: 2rem auto;
-	}
+
 	@media screen and (min-width: 992px) {
 		.sidebar {
 			display: none;

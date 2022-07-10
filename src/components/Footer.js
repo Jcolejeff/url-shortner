@@ -51,6 +51,7 @@ const Footer = () => {
           <FaInstagram />
           <FaPinterest />
         </div>
+     <h6>Coded by ikwuh Jeffery</>
       </section>
     </Wrapper>
   );
@@ -110,6 +111,7 @@ const Wrapper = styled.footer`
       color: var(--clr-white);
     }
   }
+h6{color: var(--clr-white);}
   .social-links {
     display: flex;
     gap: 3rem;

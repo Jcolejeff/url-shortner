@@ -188,7 +188,7 @@ const Wrapper = styled.section`
 				border: none;
 				padding: 1rem;
 				font-size: 1.2rem;
-				font-weight: 200;
+				font-weight: 700;
 				border-radius: 5px;
 				transition: var(--transition);
 				&:hover {

@@ -41,7 +41,7 @@ const Wrapper = styled.header`
 			text-align: center;
 			h1 {
 				font-weight: 700;
-				font-size: 4rem;
+				font-size: 3rem;
 			}
 			p {
 				font-size: 1.8rem;
@@ -58,6 +58,11 @@ const Wrapper = styled.header`
 				font-weight: 700;
 				padding-inline: 4.5rem;
 				border-radius: 30px;
+				transition: var(--transition);
+				&:hover {
+					cursor: pointer;
+					opacity: 0.5;
+				}
 			}
 		}
 		@media (min-width: 65rem) {

@@ -17,7 +17,6 @@ const getLocalStorage = () => {
 const Info = () => {
 	const [query, setQuery] = useState("");
 	const [list, setList] = useState(getLocalStorage());
-	const [error, setError] = useState("");
 	const [loading, setIsloading] = useState(false);
 	const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
 
@@ -62,7 +61,7 @@ const Info = () => {
 			}
 		} catch (error) {
 			setIsloading(false);
-			setError(error.message);
+			showAlert(true, "danger", "Network Error,Try again");
 		}
 	};
 	useEffect(() => {
@@ -188,9 +187,14 @@ const Wrapper = styled.section`
 				color: var(--clr-white);
 				border: none;
 				padding: 1rem;
-				font-size: 1.5rem;
-				font-weight: 500;
+				font-size: 1.2rem;
+				font-weight: 200;
 				border-radius: 5px;
+				transition: var(--transition);
+				&:hover {
+					background-color: hsla(180, 86%, 59%, 1);
+					cursor: pointer;
+				}
 			}
 			button:disabled {
 				cursor: not-allowed;
@@ -211,7 +215,7 @@ const Wrapper = styled.section`
 		border-radius: var(--radius);
 		margin-inline: auto;
 		margin-block-start: 5rem;
-		width: 90%;
+		width: 80%;
 		h4 {
 			font-size: 1.7rem;
 			font-weight: 700;
@@ -241,7 +245,7 @@ const Wrapper = styled.section`
 		padding-block-end: 20rem;
 		.services-center {
 			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			width: 95%;
+			width: 90%;
 			margin-inline: auto;
 		}
 		.item-3 {

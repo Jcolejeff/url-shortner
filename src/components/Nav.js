@@ -51,7 +51,7 @@ const NavContainer = styled.nav`
 		align-items: center;
 		justify-content: space-between;
 		img {
-			width: 130px;
+			width: 100px;
 			margin-left: -15px;
 		}
 	}
@@ -81,7 +81,13 @@ const NavContainer = styled.nav`
 			padding-block: 1rem;
 			border-radius: 2rem;
 			color: white;
+
 			font-weight: 900;
+			transition: var(--transition);
+			&:hover {
+				opacity: 0.5;
+				cursor: pointer;
+			}
 		}
 		.login-links {
 			display: flex;
@@ -108,14 +114,15 @@ const NavContainer = styled.nav`
 				gap: 1rem;
 			}
 
-			a {
-				color: var(--clr-grey-3);
+			li {
+				color: hsl(0, 0%, 60%);
 				font-size: 1.1rem;
 				text-transform: capitalize;
 				letter-spacing: var(--spacing);
 				padding: 0.5rem;
+				transition: var(--transition);
 				&:hover {
-					border-bottom: 2px solid var(--clr-primary-7);
+					color: black;
 				}
 			}
 		}

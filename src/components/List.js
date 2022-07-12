@@ -83,6 +83,10 @@ const Wrapper = styled.section`
 				background: hsl(180, 66%, 49%);
 				color: var(--clr-white);
 				font-weight: 700;
+				&:hover {
+					background-color: hsla(180, 86%, 59%, 1);
+					cursor: pointer;
+				}
 			}
 		}
 	}
